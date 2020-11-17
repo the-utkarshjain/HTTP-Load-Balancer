@@ -1,5 +1,6 @@
 # models.py
 import requests
+import random
 
 class Server:
     def __init__(self, endpoint, path="/healthcheck"):
