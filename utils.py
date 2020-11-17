@@ -41,7 +41,25 @@ def train_bloom_filter():
     bloom = BloomFilter()
     for row in cursor:
         bloom.add(row[0])
+    conn.close()
     return bloom
+
+def check_user(email, password, bloom):
+    if email not in bloom:
+        return 401
+    else:
+        conn = sqlite3.connect('test.db') 
+        cursor = conn.execute("SELECT * FROM USERS WHERE email = '" + email + "';")
+
+        for row in cursor:
+            if(row[1] == password):
+                conn.close()
+                return 200
+            else:
+                conn.close()
+                return 401
+
+    return 401
 
 def welcome(register):
     print("\n")
