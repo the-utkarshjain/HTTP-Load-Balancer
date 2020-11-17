@@ -28,6 +28,7 @@ def router(path="/"):
 
             lock.acquire()
             healthy_server.open_connections += 1
+            refresh_stats(updated_register)
             print("Request delegated to: " + str(healthy_server.endpoint) + " with " + str(healthy_server.open_connections))
             lock.release()
 
@@ -35,6 +36,7 @@ def router(path="/"):
 
             lock.acquire()
             healthy_server.open_connections -= 1
+            refresh_stats(updated_register)
             print("Request processed by " + str(healthy_server.endpoint) + ". Updated open connections: " + str(healthy_server.open_connections))
             lock.release()
             return response.content, response.status_code
@@ -84,6 +86,7 @@ def router_login():
 
             lock.acquire()
             healthy_server.open_connections += 1
+            refresh_stats(updated_register)
             print("Request delegated to: " + str(healthy_server.endpoint) + " with " + str(healthy_server.open_connections))
             lock.release()
 
@@ -91,6 +94,7 @@ def router_login():
 
             lock.acquire()
             healthy_server.open_connections -= 1
+            refresh_stats(updated_register)
             print("Request processed by " + str(healthy_server.endpoint) + ". Updated open connections: " + str(healthy_server.open_connections))
             lock.release()
             return response.content, response.status_code

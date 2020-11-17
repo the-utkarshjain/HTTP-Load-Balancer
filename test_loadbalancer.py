@@ -20,12 +20,12 @@ def test_host_routing_mango(client):
 
     Parallel(n_jobs= multiprocessing.cpu_count(), backend = 'threading')(delayed(execute)(i) for i in range(10))
 
-def test_host_routing_mango_login(client):
-    print("\n\n\033[1mBulk requests for www.mango.com/login \033[0m")
-    def execute(i):
-        result = client.get('/login', headers={"Host":"www.mango.com", "email": emails[i], "password": emails[i + random.randint(-1,0)].split("@")[0]})
+# def test_host_routing_mango_login(client):
+#     print("\n\n\033[1mBulk requests for www.mango.com/login \033[0m")
+#     def execute(i):
+#         result = client.get('/login', headers={"Host":"www.mango.com", "email": emails[i], "password": emails[i + random.randint(-1,0)].split("@")[0]})
 
-    Parallel(n_jobs= multiprocessing.cpu_count(), backend = 'threading')(delayed(execute)(i) for i in range(len(emails)))
+#     Parallel(n_jobs= multiprocessing.cpu_count(), backend = 'threading')(delayed(execute)(i) for i in range(len(emails)))
 
 # def test_host_routing_mango_login(client):
 #     def func(i):

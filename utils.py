@@ -14,8 +14,8 @@ def transform_backends_from_config(config):
     register = {}
     for entry in config.get('hosts', []):
         register.update({entry["host"]: [Server(endpoint) for endpoint in entry["servers"]]})
-    for entry in config.get('paths', []):
-        register.update({entry["path"]: [Server(endpoint) for endpoint in entry["servers"]]})
+    # for entry in config.get('paths', []):
+    #     register.update({entry["path"]: [Server(endpoint) for endpoint in entry["servers"]]})
     return register
 
 def get_healthy_server(host, register):
@@ -58,7 +58,6 @@ def check_user(email, password, bloom):
             else:
                 conn.close()
                 return 401
-
     return 401
 
 def welcome(register):
@@ -69,7 +68,8 @@ def welcome(register):
         print("Servers: " + str(register[server]) + "\n")
     
 def refresh_stats(register):
-    os.system('cls' if os.name == 'nt' else 'clear')
+    f = open("temp.txt", "w")
     for host in register:
         for server in register[host]:
-            print(server.endpoint, server.open_connections)
+            f.write(str(server.endpoint) + " " + str(server.healthy) + " " + str(server.open_connections)+"\n")
+    f.close()

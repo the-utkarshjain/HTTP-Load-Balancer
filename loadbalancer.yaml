@@ -14,14 +14,14 @@ hosts:
     servers:
       - localhost:1111
       - localhost:1212
-paths:
-  - path: /mango
-    servers:
-      - localhost:8081
-      - localhost:8082
-      - localhost:9081
-  - path: /apple
-    servers:
-      - localhost:9082
-      - localhost:9999
-      - localhost:8888
+# paths:
+#   - path: /mango
+#     servers:
+#       - localhost:8081
+#       - localhost:8082
+#       - localhost:9081
+#   - path: /apple
+#     servers:
+#       - localhost:9082
+#       - localhost:9999
+#       - localhost:8888
