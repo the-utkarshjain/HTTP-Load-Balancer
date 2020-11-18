@@ -68,8 +68,13 @@ def welcome(register):
         print("Servers: " + str(register[server]) + "\n")
     
 def refresh_stats(register):
-    f = open("temp.txt", "w")
+    f = open("status.txt", "w")
     for host in register:
         for server in register[host]:
             f.write(str(server.endpoint) + " " + str(server.healthy) + " " + str(server.open_connections)+"\n")
     f.close()
+
+def log_file(message):
+    log = open("log.txt", "a")
+    log.write(message)
+    log.close()

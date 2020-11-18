@@ -1,38 +1,46 @@
-from tkinter import *
-import time
+import PySimpleGUI as sg
 import os.path
 
-class A:
-    def __init__(self, master):
-        self.master = master
-        self.labels = []
-        self.read_file()
+sg.theme('DarkTeal4') 
 
-    def read_file(self):
-        file = open("temp.txt", "r").read()
-        self.status = file.split("\n")[:-1]
+def read_logfile():
+    if os.path.isfile("log.txt"):
+        file = open("log.txt", "r").read()
+        msg = file
+        return msg
+    else:
+        return "Log file not generated"
 
-        for i in range(len(self.labels)):
-            self.labels[i].pack_forget()
+def update_file():
+    if os.path.isfile("status.txt"):
+        file = open("status.txt", "r").read().split("\n")[:-1]
+        msg = ""
+        for server in file:
+            status = server.split(" ")
+            msg += 'Server: ' + status[0] + '\nActive: ' + status[1] + '\nOpen Connections: ' + status[2] + "\n\n"
+        return msg
+    else:
+        return "Wating for status response..."
 
-        self.labels = []
+tab1_layout = [[sg.Multiline('Fetching data...', key='-TAB1 TEXT-', size=(100, 30), font=('Helvetica 14'))]]
+tab2_layout = [[sg.Multiline('Fetching log file...', key='-TAB2 TEXT-', size=(100, 30), font=('Helvetica 14'))], [sg.Button('Generate logs', button_color=('white', '#007339'), key='READ', font = ('Helvetica 14'))]]
 
-        for i in range(len(self.status)):
-            self.labels.append(Text(self.master, height=4, width=500, font=("TkDefaultFont", 15), state='disabled'))
+layout = [  [ sg.Text('Load Balancer Console', font = ('Helvetica 20 bold'), justification='center', key = '-TITLE-') ],
+            [ sg.TabGroup([ [sg.Tab('Sever Status', tab1_layout)], [sg.Tab('Logs', tab2_layout)] ]) ],
+            [ sg.Button('Exit', size = (4,1), font=('Helvetica 14')) ]]
 
-        for i in range(len(self.labels)):
-            text = self.status[i].split(" ")
-            msg = 'Server: ' + text[0] + '\nActive: ' + text[1] + '\nOpen Connections: ' + text[2]
-            self.labels[i].config(state='normal')
-            self.labels[i].delete('1.0', END)
-            self.labels[i].insert(END,msg)
-            self.labels[i].config(state='disabled')
-            self.labels[i].pack()
+window = sg.Window('LoadBalancer', layout, finalize=True, resizable=True)
 
-        self.labels[0].after(60, self.read_file)
+window['-TITLE-'].expand(True, True, True)
 
-root = Tk()
-root.title('Load balancer')
-root.geometry("600x700")
-A(root)
-root.mainloop()
+while True:
+    event, values = window.read(timeout = 30)
+    msg = update_file()
+    window['-TAB1 TEXT-'].update(msg)
+
+    if event == 'READ':
+        log = read_logfile()
+        window['-TAB2 TEXT-'].update(log)
+
+    if event == sg.WIN_CLOSED or event == 'Exit':
+        break

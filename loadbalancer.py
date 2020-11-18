@@ -21,15 +21,20 @@ def router(path="/"):
         
     for entry in config["hosts"]:
         if host_header == entry["host"]:
-            healthy_server = get_healthy_server(entry["host"], updated_register)
-            if not healthy_server:
-                print("No Backends servers available for" + host_header)
-                return "No Backends servers available for" + host_header, 503
 
             lock.acquire()
+            healthy_server = get_healthy_server(entry["host"], updated_register)
+            if not healthy_server:
+                lock.release()
+                send_back_msg = "No Backends servers available for" + host_header + ". ERROR CODE 503"
+                print(send_back_msg)
+                log_file(send_back_msg + "\n")
+                return send_back_msg, 503
             healthy_server.open_connections += 1
             refresh_stats(updated_register)
-            print("Request delegated to: " + str(healthy_server.endpoint) + " with " + str(healthy_server.open_connections))
+            send_back_msg = "Delegated to: " + str(healthy_server.endpoint) + ". Open connections: " + str(healthy_server.open_connections) + ". STATUS CODE 202"
+            print(send_back_msg)
+            log_file(send_back_msg + "\n")
             lock.release()
 
             response = requests.get("http://{}".format(healthy_server.endpoint))
@@ -37,7 +42,9 @@ def router(path="/"):
             lock.acquire()
             healthy_server.open_connections -= 1
             refresh_stats(updated_register)
-            print("Request processed by " + str(healthy_server.endpoint) + ". Updated open connections: " + str(healthy_server.open_connections))
+            send_back_msg = "Request processed: " + str(healthy_server.endpoint) + ". Open connections: " + str(healthy_server.open_connections) + ". STATUS CODE 200"
+            print(send_back_msg)
+            log_file(send_back_msg + "\n")
             lock.release()
             return response.content, response.status_code
     
@@ -61,7 +68,9 @@ def router(path="/"):
     #         lock.release()
     #         return response.content, response.status_code
 
-    print("This site can’t be reached. " + host_header + " server IP address could not be found.")
+    send_back_msg = "This site can’t be reached " + host_header + ". Server IP address could not be found. ERROR CODE 404"
+    print(send_back_msg)
+    log_file(send_back_msg + "\n")
     return "Not Found", 404
 
 @loadbalancer.route("/login")
@@ -73,21 +82,29 @@ def router_login():
         if host_header == entry["host"]:
             healthy_server = get_healthy_server(entry["host"], updated_register)
             if not healthy_server:
-                print("No Backends servers available for" + host_header)
-                return "No Backends servers available for" + host_header, 503
+                send_back_msg = "No Backends servers available for" + host_header + ". ERROR CODE 503"
+                print(send_back_msg)
+                log_file(send_back_msg + "\n")
+                return send_back_msg, 503
 
             if(request.headers["email"]):
                 status_check = check_user(request.headers["email"], request.headers["password"], bloom)
                 if(status_check == 401):
-                    print(request.headers["email"] + " is wrong. Sign up to create a new account.")
+                    send_back_msg = request.headers["email"] + " not found. ERROR CODE 401"
+                    print(send_back_msg)
+                    log_file(send_back_msg + "\n")
                     return 401
                 else:
-                    print("Welcome " + request.headers["password"] + ". Your request is being processed.")
+                    send_back_msg = "Welcome " + request.headers["password"] + ". Your request is being processed. STATUS CODE 202"
+                    print(send_back_msg)
+                    log_file(send_back_msg + "\n")
 
             lock.acquire()
             healthy_server.open_connections += 1
             refresh_stats(updated_register)
-            print("Request delegated to: " + str(healthy_server.endpoint) + " with " + str(healthy_server.open_connections))
+            send_back_msg = "Delegated to: " + str(healthy_server.endpoint) + ". Open connections: " + str(healthy_server.open_connections) + ". STATUS CODE 202"
+            print(send_back_msg)
+            log_file(send_back_msg + "\n")
             lock.release()
 
             response = requests.get("http://{}".format(healthy_server.endpoint))
@@ -95,7 +112,9 @@ def router_login():
             lock.acquire()
             healthy_server.open_connections -= 1
             refresh_stats(updated_register)
-            print("Request processed by " + str(healthy_server.endpoint) + ". Updated open connections: " + str(healthy_server.open_connections))
+            send_back_msg = "Request processed:" + str(healthy_server.endpoint) + ". Open connections: " + str(healthy_server.open_connections) + ". STATUS CODE 200"
+            print(send_back_msg)
+            log_file(send_back_msg + "\n")
             lock.release()
             return response.content, response.status_code
     
@@ -119,5 +138,7 @@ def router_login():
     #         lock.release()
     #         return response.content, response.status_code
 
-    print("This site can’t be reached. " + host_header + " server IP address could not be found.")
+    send_back_msg = "This site can’t be reached " + host_header + ". Server IP address could not be found. ERROR CODE 404"
+    print(send_back_msg)
+    log_file(send_back_msg + "\n")
     return "Not Found", 404

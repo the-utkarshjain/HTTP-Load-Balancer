@@ -5,6 +5,7 @@ import pytest
 import multiprocessing
 import re
 import random
+from utils import log_file
 
 emails = ["akzelxw@hotmail.com","elum@gmail.com","akbar.ca","akaterasu@gmail.com","akarui.kibuno@gmail.com","ajsparkchick@hotmail.com","ajmeia@yahoo.com","ajhnstn87@gmail.com","ailuvzhoko4@hotmail.com","ailuvzhoko3@hotmail.com","ailuvzhoko2@hotmail.com","ailuvzhoko@hotmail.com","aillensiquioco@aol.com","ahmovic_ines@hotmail.com","ahmed_g300@yahoo.com","ahmadjazlan@gmail.com","ahmad_ridho19@yahoo.com","ahgou_9@hotmail.com","ahan221@yahoo.com","agungarifiyanto@yahoo.com","agnestenerife@yahoo.com","agian_ee@yahoo.com","afrodzac007@aol.com","affinboy@hotmail.com","afdal_hair1303@yahoo.com","afd1944@gmail.com","afandi.ilham@yahoo.com","aerongreg@yahoo.com","adria@jbi.com","ado97_madero@hotmail.com","aditye55@yahoo.com","adhie.impossible@gmail.com","adeeldaftary@gmail.com","adam_petre@hotmail.com","adam_khaldoon911@yahoo.com","ium@yahoo.com"]
 
@@ -15,17 +16,19 @@ def client():
 
 def test_host_routing_mango(client):
     print("\n\n\033[1mBulk requests for www.mango.com \033[0m")
+    log_file("\n\nBulk requests for www.mango.com\n\n")
     def execute(i):
         result = client.get('/', headers={"Host":"www.mango.com"})
 
-    Parallel(n_jobs= multiprocessing.cpu_count(), backend = 'threading')(delayed(execute)(i) for i in range(10))
+    Parallel(n_jobs= multiprocessing.cpu_count(), backend = 'threading')(delayed(execute)(i) for i in range(50))
 
-# def test_host_routing_mango_login(client):
-#     print("\n\n\033[1mBulk requests for www.mango.com/login \033[0m")
-#     def execute(i):
-#         result = client.get('/login', headers={"Host":"www.mango.com", "email": emails[i], "password": emails[i + random.randint(-1,0)].split("@")[0]})
+def test_host_routing_mango_login(client):
+    print("\n\n\033[1mBulk requests for www.mango.com/login \033[0m")
+    log_file("\n\nBulk requests for www.mango.com/login\n\n")
+    def execute(i):
+        result = client.get('/login', headers={"Host":"www.mango.com", "email": emails[i], "password": emails[i + random.randint(-1,0)].split("@")[0]})
 
-#     Parallel(n_jobs= multiprocessing.cpu_count(), backend = 'threading')(delayed(execute)(i) for i in range(len(emails)))
+    Parallel(n_jobs= multiprocessing.cpu_count(), backend = 'threading')(delayed(execute)(i) for i in range(len(emails)))
 
 # def test_host_routing_mango_login(client):
 #     def func(i):
