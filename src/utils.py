@@ -3,6 +3,8 @@ from bloom_filter import BloomFilter
 from models import Server
 import yaml, os, random, sqlite3
 
+database = "database/test.db"
+
 def load_configuration(path):
     with open(path) as config_file:
         config = yaml.load(config_file, Loader=yaml.FullLoader)
@@ -32,7 +34,7 @@ def healthcheck(register):
     return register
 
 def train_bloom_filter():
-    conn = sqlite3.connect('test.db') 
+    conn = sqlite3.connect(database) 
     cursor = conn.execute("SELECT email, password from USERS")
     bloom = BloomFilter()
     for row in cursor:
@@ -44,7 +46,7 @@ def check_user(email, password, bloom):
     if email not in bloom:
         return 401
     else:
-        conn = sqlite3.connect('test.db') 
+        conn = sqlite3.connect(database) 
         cursor = conn.execute("SELECT * FROM USERS WHERE email = '" + email + "';")
 
         for row in cursor:
