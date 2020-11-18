@@ -1,0 +1,224 @@
+
+
+Bulk requests for www.amazon.com
+
+Delegated to: localhost:8081. Open connections: 1. STATUS CODE 202
+Delegated to: localhost:8082. Open connections: 1. STATUS CODE 202
+Delegated to: localhost:9081. Open connections: 1. STATUS CODE 202
+Delegated to: localhost:8081. Open connections: 2. STATUS CODE 202
+Delegated to: localhost:8082. Open connections: 2. STATUS CODE 202
+Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
+Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
+Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
+Request processed: localhost:8082. Open connections: 2. STATUS CODE 200
+Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
+Request processed: localhost:8081. Open connections: 2. STATUS CODE 200
+Request processed: localhost:9081. Open connections: 1. STATUS CODE 200
+Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
+Request processed: localhost:8082. Open connections: 2. STATUS CODE 200
+Request processed: localhost:9081. Open connections: 1. STATUS CODE 200
+Request processed: localhost:8081. Open connections: 1. STATUS CODE 200
+Request processed: localhost:8082. Open connections: 1. STATUS CODE 200
+Request processed: localhost:8082. Open connections: 0. STATUS CODE 200
+Request processed: localhost:8081. Open connections: 0. STATUS CODE 200
+Request processed: localhost:9081. Open connections: 0. STATUS CODE 200
+
+
+Bulk requests for www.amazon.com/login
+
+elum@gmail.com not found. ERROR CODE 401
+Welcome akaterasu. Your request is being processed. STATUS CODE 202
+akbar.ca not found. ERROR CODE 401
+Delegated to: localhost:8081. Open connections: 1. STATUS CODE 202
+ajhnstn87@gmail.com not found. ERROR CODE 401
+akzelxw@hotmail.com not found. ERROR CODE 401
+Welcome akarui.kibuno. Your request is being processed. STATUS CODE 202
+Welcome ajmeia. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8082. Open connections: 1. STATUS CODE 202
+ajsparkchick@hotmail.com not found. ERROR CODE 401
+Delegated to: localhost:8082. Open connections: 2. STATUS CODE 202
+ailuvzhoko4@hotmail.com not found. ERROR CODE 401
+ailuvzhoko3@hotmail.com not found. ERROR CODE 401
+Welcome ailuvzhoko2. Your request is being processed. STATUS CODE 202
+Welcome ailuvzhoko. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9081. Open connections: 1. STATUS CODE 202
+aillensiquioco@aol.com not found. ERROR CODE 401
+Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
+ahmovic_ines@hotmail.com not found. ERROR CODE 401
+ahmed_g300@yahoo.com not found. ERROR CODE 401
+Welcome ahmadjazlan. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8081. Open connections: 2. STATUS CODE 202
+Welcome ahmad_ridho19. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
+Welcome ahgou_9. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
+Request processed:localhost:8081. Open connections: 2. STATUS CODE 200
+ahan221@yahoo.com not found. ERROR CODE 401
+agungarifiyanto@yahoo.com not found. ERROR CODE 401
+Welcome agnestenerife. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
+Request processed:localhost:8081. Open connections: 2. STATUS CODE 200
+agian_ee@yahoo.com not found. ERROR CODE 401
+afrodzac007@aol.com not found. ERROR CODE 401
+affinboy@hotmail.com not found. ERROR CODE 401
+afdal_hair1303@yahoo.com not found. ERROR CODE 401
+Welcome afd1944. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
+Request processed:localhost:8082. Open connections: 2. STATUS CODE 200
+afandi.ilham@yahoo.com not found. ERROR CODE 401
+aerongreg@yahoo.com not found. ERROR CODE 401
+Welcome adria. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
+Request processed:localhost:8081. Open connections: 2. STATUS CODE 200
+ado97_madero@hotmail.com not found. ERROR CODE 401
+aditye55@yahoo.com not found. ERROR CODE 401
+Welcome adhie.impossible. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
+Request processed:localhost:9081. Open connections: 1. STATUS CODE 200
+Welcome adeeldaftary. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
+Request processed:localhost:8082. Open connections: 2. STATUS CODE 200
+adam_petre@hotmail.com not found. ERROR CODE 401
+Welcome adam_khaldoon911. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
+Request processed:localhost:8082. Open connections: 2. STATUS CODE 200
+Welcome ium. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
+Request processed:localhost:9081. Open connections: 1. STATUS CODE 200
+Request processed:localhost:8081. Open connections: 2. STATUS CODE 200
+Request processed:localhost:8082. Open connections: 2. STATUS CODE 200
+Request processed:localhost:8082. Open connections: 1. STATUS CODE 200
+Request processed:localhost:8081. Open connections: 1. STATUS CODE 200
+Request processed:localhost:8081. Open connections: 0. STATUS CODE 200
+Request processed:localhost:9081. Open connections: 0. STATUS CODE 200
+Request processed:localhost:8082. Open connections: 0. STATUS CODE 200
+
+
+Bulk requests for www.apple.com
+
+Delegated to: localhost:9082. Open connections: 1. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 2. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 3. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 4. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 5. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 6. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 7. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed: localhost:9082. Open connections: 7. STATUS CODE 200
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed: localhost:9082. Open connections: 7. STATUS CODE 200
+Request processed: localhost:9082. Open connections: 6. STATUS CODE 200
+Request processed: localhost:9082. Open connections: 5. STATUS CODE 200
+Delegated to: localhost:9082. Open connections: 6. STATUS CODE 202
+Request processed: localhost:9082. Open connections: 5. STATUS CODE 200
+Request processed: localhost:9082. Open connections: 4. STATUS CODE 200
+Request processed: localhost:9082. Open connections: 3. STATUS CODE 200
+Request processed: localhost:9082. Open connections: 2. STATUS CODE 200
+Request processed: localhost:9082. Open connections: 1. STATUS CODE 200
+Request processed: localhost:9082. Open connections: 0. STATUS CODE 200
+
+
+Bulk requests for www.apple.com/login
+
+akbar.ca not found. ERROR CODE 401
+Welcome elum. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 1. STATUS CODE 202
+akzelxw@hotmail.com not found. ERROR CODE 401
+ajsparkchick@hotmail.com not found. ERROR CODE 401
+Welcome akarui.kibuno. Your request is being processed. STATUS CODE 202
+Welcome ajmeia. Your request is being processed. STATUS CODE 202
+Welcome akaterasu. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 2. STATUS CODE 202
+ajhnstn87@gmail.com not found. ERROR CODE 401
+Delegated to: localhost:9082. Open connections: 3. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 4. STATUS CODE 202
+Welcome ailuvzhoko4. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 5. STATUS CODE 202
+ailuvzhoko3@hotmail.com not found. ERROR CODE 401
+ailuvzhoko2@hotmail.com not found. ERROR CODE 401
+Welcome ailuvzhoko. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 6. STATUS CODE 202
+aillensiquioco@aol.com not found. ERROR CODE 401
+Welcome ahmovic_ines. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 7. STATUS CODE 202
+Welcome ahmed_g300. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+ahmadjazlan@gmail.com not found. ERROR CODE 401
+Welcome ahmad_ridho19. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+ahgou_9@hotmail.com not found. ERROR CODE 401
+Welcome ahan221. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+agungarifiyanto@yahoo.com not found. ERROR CODE 401
+Welcome agnestenerife. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+Welcome agian_ee. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+afrodzac007@aol.com not found. ERROR CODE 401
+affinboy@hotmail.com not found. ERROR CODE 401
+Welcome afdal_hair1303. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+Request processed:localhost:9082. Open connections: 6. STATUS CODE 200
+afd1944@gmail.com not found. ERROR CODE 401
+Welcome afandi.ilham. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 7. STATUS CODE 202
+Welcome aerongreg. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+adria@jbi.com not found. ERROR CODE 401
+ado97_madero@hotmail.com not found. ERROR CODE 401
+Welcome aditye55. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+Welcome adhie.impossible. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+adeeldaftary@gmail.com not found. ERROR CODE 401
+adam_petre@hotmail.com not found. ERROR CODE 401
+Welcome adam_khaldoon911. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+Welcome ium. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+Request processed:localhost:9082. Open connections: 6. STATUS CODE 200
+Request processed:localhost:9082. Open connections: 5. STATUS CODE 200
+Request processed:localhost:9082. Open connections: 4. STATUS CODE 200
+Request processed:localhost:9082. Open connections: 3. STATUS CODE 200
+Request processed:localhost:9082. Open connections: 2. STATUS CODE 200
+Request processed:localhost:9082. Open connections: 1. STATUS CODE 200
+Request processed:localhost:9082. Open connections: 0. STATUS CODE 200
+
+
+Bulk requests for www.notmango.com
+
+This site can’t be reached: www.notmango.com. Server IP address could not be found. ERROR CODE 404
+This site can’t be reached: www.notmango.com. Server IP address could not be found. ERROR CODE 404
+This site can’t be reached: www.notmango.com. Server IP address could not be found. ERROR CODE 404
+This site can’t be reached: www.notmango.com. Server IP address could not be found. ERROR CODE 404
+This site can’t be reached: www.notmango.com. Server IP address could not be found. ERROR CODE 404
+This site can’t be reached: www.notmango.com. Server IP address could not be found. ERROR CODE 404
+This site can’t be reached: www.notmango.com. Server IP address could not be found. ERROR CODE 404
+This site can’t be reached: www.notmango.com. Server IP address could not be found. ERROR CODE 404
+This site can’t be reached: www.notmango.com. Server IP address could not be found. ERROR CODE 404
+This site can’t be reached: www.notmango.com. Server IP address could not be found. ERROR CODE 404
+
+
+Bulk requests for www.flipkart.com
+
+www.flipkart.com is unable to handle requests. ERROR CODE 503
+www.flipkart.com is unable to handle requests. ERROR CODE 503
+www.flipkart.com is unable to handle requests. ERROR CODE 503
+www.flipkart.com is unable to handle requests. ERROR CODE 503
+www.flipkart.com is unable to handle requests. ERROR CODE 503
+www.flipkart.com is unable to handle requests. ERROR CODE 503
+www.flipkart.com is unable to handle requests. ERROR CODE 503
+www.flipkart.com is unable to handle requests. ERROR CODE 503
+www.flipkart.com is unable to handle requests. ERROR CODE 503
+www.flipkart.com is unable to handle requests. ERROR CODE 503

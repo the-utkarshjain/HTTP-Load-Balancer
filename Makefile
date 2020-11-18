@@ -1,7 +1,7 @@
 # Makefile
 test:
-	rm -f log.txt status.txt
-	# docker build -t server .
-	docker-compose up -d
+	rm -f logs/log.txt logs/status.txt
+	docker build -t server .
+	docker-compose -f ./config/docker-compose.yaml up -d
 	pytest -s --disable-warnings || true
-	docker-compose down
+	docker-compose -f ./config/docker-compose.yaml down

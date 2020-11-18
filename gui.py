@@ -4,16 +4,18 @@ import os.path
 sg.theme('DarkTeal4') 
 
 def read_logfile():
-    if os.path.isfile("log.txt"):
-        file = open("log.txt", "r").read()
+    path = "logs/log.txt"
+    if os.path.isfile(path):
+        file = open(path, "r").read()
         msg = file
         return msg
     else:
         return "Log file not generated"
 
 def update_file():
-    if os.path.isfile("status.txt"):
-        file = open("status.txt", "r").read().split("\n")[:-1]
+    path = "logs/status.txt"
+    if os.path.isfile(path):
+        file = open(path, "r").read().split("\n")[:-1]
         msg = ""
         for server in file:
             status = server.split(" ")
@@ -22,8 +24,8 @@ def update_file():
     else:
         return "Wating for status response..."
 
-tab1_layout = [[sg.Multiline('Fetching data...', key='-TAB1 TEXT-', size=(100, 30), font=('Helvetica 14'))]]
-tab2_layout = [[sg.Multiline('Fetching log file...', key='-TAB2 TEXT-', size=(100, 30), font=('Helvetica 14'))], [sg.Button('Generate logs', button_color=('white', '#007339'), key='READ', font = ('Helvetica 14'))]]
+tab1_layout = [[sg.Multiline('Fetching data...', key='-TAB1 TEXT-', size=(100, 30), font=('Helvetica 14'), pad=(2,2))]]
+tab2_layout = [[sg.Multiline('Fetching log file...', key='-TAB2 TEXT-', size=(100, 30), font=('Helvetica 14'), pad=(2,2))], [sg.Button('Generate logs', key='READ', font = ('Helvetica 14'))]]
 
 layout = [  [ sg.Text('Load Balancer Console', font = ('Helvetica 20 bold'), justification='center', key = '-TITLE-') ],
             [ sg.TabGroup([ [sg.Tab('Sever Status', tab1_layout)], [sg.Tab('Logs', tab2_layout)] ]) ],

@@ -1,7 +1,6 @@
 # app.py
 from flask import Flask
-import os
-import time
+import os, time
 from random import randint
 
 app = Flask(__name__)

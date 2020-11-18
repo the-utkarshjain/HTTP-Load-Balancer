@@ -32,3 +32,19 @@ services:
       - ENDPOINT=localhost:9082
     ports:
       - "9082:5000"
+  
+  # apple2:
+  #   image: server
+  #   environment:
+  #     - APP=apple
+  #     - ENDPOINT=localhost:9083
+  #   ports:
+  #     - "9083:5000"
+    
+  # orange1:
+  #   image: server
+  #   environment:
+  #     - APP=orange
+  #     - ENDPOINT=localhost:1111
+  #   ports:
+  #     - "1111:5000"

@@ -1,9 +1,7 @@
 # utils.py
-from models import Server
-import yaml, os
-import random
-import sqlite3
 from bloom_filter import BloomFilter
+from models import Server
+import yaml, os, random, sqlite3
 
 def load_configuration(path):
     with open(path) as config_file:
@@ -14,8 +12,6 @@ def transform_backends_from_config(config):
     register = {}
     for entry in config.get('hosts', []):
         register.update({entry["host"]: [Server(endpoint) for endpoint in entry["servers"]]})
-    # for entry in config.get('paths', []):
-    #     register.update({entry["path"]: [Server(endpoint) for endpoint in entry["servers"]]})
     return register
 
 def get_healthy_server(host, register):
@@ -68,13 +64,13 @@ def welcome(register):
         print("Servers: " + str(register[server]) + "\n")
     
 def refresh_stats(register):
-    f = open("status.txt", "w")
+    f = open("logs/status.txt", "w")
     for host in register:
         for server in register[host]:
             f.write(str(server.endpoint) + " " + str(server.healthy) + " " + str(server.open_connections)+"\n")
     f.close()
 
 def log_file(message):
-    log = open("log.txt", "a")
+    log = open("logs/log.txt", "a")
     log.write(message)
     log.close()
