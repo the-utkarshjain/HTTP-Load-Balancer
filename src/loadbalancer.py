@@ -16,7 +16,7 @@ def router(path="/"):
     updated_register = healthcheck(register)
     host_header = request.headers["Host"]
     if not process_firewall_rules_flag(config, host_header, request.environ["REMOTE_ADDR"]):
-        print("request blocked for ip: " + request.environ["REMOTE_ADDR"])
+        print("Request blocked for ip: " + request.environ["REMOTE_ADDR"] + ". STATUS CODE 403")
         return "Forbidden", 403
         
     for entry in config["hosts"]:
