@@ -1,6 +1,10 @@
 # loadbalancer.yaml
 hosts:
   - host: www.amazon.com
+    firewall_rules:
+      ip_reject:
+        - 47.125.74.69
+        - 184.236.45.96
     servers:
       - localhost:8081
       - localhost:8082
@@ -9,6 +13,7 @@ hosts:
     firewall_rules:
       ip_reject:
         - 192.168.29.142
+        - 157.25.45.15
     servers:
       - localhost:9082
       - localhost:9083
