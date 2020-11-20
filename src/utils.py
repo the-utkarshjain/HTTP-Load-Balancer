@@ -76,3 +76,11 @@ def log_file(message):
     log = open("logs/log.txt", "a")
     log.write(message)
     log.close()
+
+def process_firewall_rules_flag(config, host, client_ip):
+    for entry in config.get('hosts', []):
+        if host == entry['host']:
+            firewall_rules = entry.get('firewall_rules', {})
+            if client_ip in firewall_rules.get("ip_reject", []):
+                return False
+    return True

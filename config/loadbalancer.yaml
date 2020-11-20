@@ -6,6 +6,9 @@ hosts:
       - localhost:8082
       - localhost:9081
   - host: www.apple.com
+    firewall_rules:
+      ip_reject:
+        - 192.168.29.142
     servers:
       - localhost:9082
       - localhost:9083
