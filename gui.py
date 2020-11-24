@@ -19,13 +19,13 @@ def update_file():
         msg = ""
         for server in file:
             status = server.split(" ")
-            msg += 'Server: ' + status[0] + '\nActive: ' + status[1] + '\nOpen Connections: ' + status[2] + "\n\n"
+            msg += 'Host: ' + status[0] + '\nServer: ' + status[1] + '\nActive: ' + status[2] + '\nOpen Connections: ' + status[3] + "\n\n"
         return msg
     else:
         return "Wating for status response..."
 
-tab1_layout = [[sg.Multiline('Fetching data...', key='-TAB1 TEXT-', size=(100, 30), font=('Helvetica 14'), pad=(2,2))]]
-tab2_layout = [[sg.Multiline('Fetching log file...', key='-TAB2 TEXT-', size=(100, 30), font=('Helvetica 14'), pad=(2,2))], [sg.Button('Generate logs', key='READ', font = ('Helvetica 14'))]]
+tab1_layout = [[sg.Multiline('Fetching data...', key='-TAB1 TEXT-', size=(100, 42), font=('Helvetica 14'), pad=(2,2))]]
+tab2_layout = [[sg.Multiline('Fetching log file...', key='-TAB2 TEXT-', size=(100, 42), font=('Helvetica 14'), pad=(2,2))], [sg.Button('Generate logs', key='READ', font = ('Helvetica 14'))]]
 
 layout = [  [ sg.Text('Load Balancer Console', font = ('Helvetica 20 bold'), justification='center', key = '-TITLE-') ],
             [ sg.TabGroup([ [sg.Tab('Sever Status', tab1_layout)], [sg.Tab('Logs', tab2_layout)] ]) ],

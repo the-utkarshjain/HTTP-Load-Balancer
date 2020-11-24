@@ -1,3 +1,5 @@
+# bloom.py
+# Adds data to the database. Just add all the email addrress to the email list and run this file
 import sqlite3
 
 conn = sqlite3.connect('test.db')

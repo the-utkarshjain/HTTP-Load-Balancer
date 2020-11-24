@@ -69,7 +69,7 @@ def refresh_stats(register):
     f = open("logs/status.txt", "w")
     for host in register:
         for server in register[host]:
-            f.write(str(server.endpoint) + " " + str(server.healthy) + " " + str(server.open_connections)+"\n")
+            f.write(str(host) + " " + str(server.endpoint) + " " + str(server.healthy) + " " + str(server.open_connections)+"\n")
     f.close()
 
 def log_file(message):

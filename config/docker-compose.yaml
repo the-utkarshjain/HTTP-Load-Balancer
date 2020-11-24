@@ -41,7 +41,7 @@ services:
   #   ports:
   #     - "9083:5000"
     
-  # orange1:
+  # flipkart1:
   #   image: server
   #   environment:
   #     - APP=orange

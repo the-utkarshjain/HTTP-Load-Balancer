@@ -1,4 +1,6 @@
 # app.py
+# Serves all the servers
+
 from flask import Flask
 import os, time
 from random import randint

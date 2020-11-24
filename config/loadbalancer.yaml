@@ -1,4 +1,5 @@
 # loadbalancer.yaml
+# This file works like a DNS and also keeps the firewall rules
 hosts:
   - host: www.amazon.com
     firewall_rules:

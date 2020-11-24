@@ -11,26 +11,26 @@ Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
 Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
 Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
 Request processed: localhost:8082. Open connections: 2. STATUS CODE 200
-Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
-Request processed: localhost:8081. Open connections: 2. STATUS CODE 200
-Request processed: localhost:8082. Open connections: 2. STATUS CODE 200
 Request processed: localhost:9081. Open connections: 1. STATUS CODE 200
 Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
-Request processed: localhost:8082. Open connections: 1. STATUS CODE 200
+Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
+Request processed: localhost:8081. Open connections: 2. STATUS CODE 200
 Request processed: localhost:9081. Open connections: 1. STATUS CODE 200
+Request processed: localhost:8082. Open connections: 2. STATUS CODE 200
 Request processed: localhost:8081. Open connections: 1. STATUS CODE 200
 Request processed: localhost:8081. Open connections: 0. STATUS CODE 200
+Request processed: localhost:8082. Open connections: 1. STATUS CODE 200
 Request processed: localhost:8082. Open connections: 0. STATUS CODE 200
 Request processed: localhost:9081. Open connections: 0. STATUS CODE 200
 
 
 Bulk firewall requests for www.amazon.com
 
+Request blocked for ip: 47.125.74.69. STATUS CODE 403 
 Delegated to: localhost:8081. Open connections: 1. STATUS CODE 202
 Delegated to: localhost:8082. Open connections: 1. STATUS CODE 202
-Request blocked for ip: 47.125.74.69. STATUS CODE 403 
-Delegated to: localhost:9081. Open connections: 1. STATUS CODE 202
 Request blocked for ip: 184.236.45.96. STATUS CODE 403 
+Delegated to: localhost:9081. Open connections: 1. STATUS CODE 202
 Delegated to: localhost:8081. Open connections: 2. STATUS CODE 202
 Delegated to: localhost:8082. Open connections: 2. STATUS CODE 202
 Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
@@ -38,88 +38,82 @@ Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
 Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
 Request processed: localhost:8082. Open connections: 2. STATUS CODE 200
 Request processed: localhost:8081. Open connections: 2. STATUS CODE 200
+Request processed: localhost:8082. Open connections: 1. STATUS CODE 200
 Request processed: localhost:8081. Open connections: 1. STATUS CODE 200
 Request processed: localhost:9081. Open connections: 1. STATUS CODE 200
-Request processed: localhost:8082. Open connections: 1. STATUS CODE 200
 Request processed: localhost:8082. Open connections: 0. STATUS CODE 200
-Request processed: localhost:9081. Open connections: 0. STATUS CODE 200
 Request processed: localhost:8081. Open connections: 0. STATUS CODE 200
+Request processed: localhost:9081. Open connections: 0. STATUS CODE 200
 
 
 Testing bloom filter with bulk requests for www.amazon.com/login
 
-ajhnstn87@gmail.com not found. ERROR CODE 401
-ajmeia@yahoo.com not found. ERROR CODE 401
-akaterasu@gmail.com not found. ERROR CODE 401
 Welcome elum. Your request is being processed. STATUS CODE 202
-ajsparkchick@hotmail.com not found. ERROR CODE 401
-Welcome akarui.kibuno. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:8081. Open connections: 1. STATUS CODE 202
-akzelxw@hotmail.com not found. ERROR CODE 401
-Welcome akbar.ca. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:8081. Open connections: 2. STATUS CODE 202
+akaterasu@gmail.com not found. ERROR CODE 401
+ajmeia@yahoo.com not found. ERROR CODE 401
+Welcome ajsparkchick. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:8082. Open connections: 1. STATUS CODE 202
-ailuvzhoko3@hotmail.com not found. ERROR CODE 401
-ailuvzhoko4@hotmail.com not found. ERROR CODE 401
-Welcome ailuvzhoko2. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:9081. Open connections: 1. STATUS CODE 202
-Welcome ailuvzhoko. Your request is being processed. STATUS CODE 202
+Welcome akbar.ca. Your request is being processed. STATUS CODE 202
+akarui.kibuno@gmail.com not found. ERROR CODE 401
 Delegated to: localhost:8082. Open connections: 2. STATUS CODE 202
-Welcome aillensiquioco. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
+Welcome ajhnstn87. Your request is being processed. STATUS CODE 202
+akzelxw@hotmail.com not found. ERROR CODE 401
+Delegated to: localhost:9081. Open connections: 1. STATUS CODE 202
+ailuvzhoko2@hotmail.com not found. ERROR CODE 401
+Welcome ailuvzhoko3. Your request is being processed. STATUS CODE 202
+ailuvzhoko4@hotmail.com not found. ERROR CODE 401
+ailuvzhoko@hotmail.com not found. ERROR CODE 401
+Delegated to: localhost:8081. Open connections: 2. STATUS CODE 202
+aillensiquioco@aol.com not found. ERROR CODE 401
 ahmovic_ines@hotmail.com not found. ERROR CODE 401
-Welcome ahmed_g300. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
-Welcome ahmadjazlan. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
-Request processed:localhost:8081. Open connections: 2. STATUS CODE 200
-Welcome ahmad_ridho19. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
-Request processed:localhost:9081. Open connections: 1. STATUS CODE 200
+ahmed_g300@yahoo.com not found. ERROR CODE 401
+ahmadjazlan@gmail.com not found. ERROR CODE 401
 Welcome ahgou_9. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
-Request processed:localhost:8082. Open connections: 2. STATUS CODE 200
-ahan221@yahoo.com not found. ERROR CODE 401
-Welcome agungarifiyanto. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
-Request processed:localhost:8082. Open connections: 2. STATUS CODE 200
+ahmad_ridho19@yahoo.com not found. ERROR CODE 401
+Welcome ahan221. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
+agungarifiyanto@yahoo.com not found. ERROR CODE 401
 Welcome agnestenerife. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
-Request processed:localhost:9081. Open connections: 1. STATUS CODE 200
+Request processed:localhost:8081. Open connections: 2. STATUS CODE 200
 agian_ee@yahoo.com not found. ERROR CODE 401
-Request processed:localhost:8081. Open connections: 2. STATUS CODE 200
+Request processed:localhost:9081. Open connections: 1. STATUS CODE 200
+Welcome affinboy. Your request is being processed. STATUS CODE 202
 afrodzac007@aol.com not found. ERROR CODE 401
-Request processed:localhost:9081. Open connections: 0. STATUS CODE 200
-Request processed:localhost:8082. Open connections: 2. STATUS CODE 200
-affinboy@hotmail.com not found. ERROR CODE 401
-Welcome afd1944. Your request is being processed. STATUS CODE 202
-Welcome afdal_hair1303. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:9081. Open connections: 1. STATUS CODE 202
-afandi.ilham@yahoo.com not found. ERROR CODE 401
 Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
-aerongreg@yahoo.com not found. ERROR CODE 401
-adria@jbi.com not found. ERROR CODE 401
-Welcome ado97_madero. Your request is being processed. STATUS CODE 202
+Welcome afdal_hair1303. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
-aditye55@yahoo.com not found. ERROR CODE 401
-Welcome adhie.impossible. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
 Request processed:localhost:8082. Open connections: 2. STATUS CODE 200
-Welcome adeeldaftary. Your request is being processed. STATUS CODE 202
+afd1944@gmail.com not found. ERROR CODE 401
+Welcome afandi.ilham. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
 Request processed:localhost:8081. Open connections: 2. STATUS CODE 200
-Welcome adam_petre. Your request is being processed. STATUS CODE 202
+Welcome aerongreg. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:8081. Open connections: 3. STATUS CODE 202
-Request processed:localhost:8081. Open connections: 2. STATUS CODE 200
-adam_khaldoon911@yahoo.com not found. ERROR CODE 401
-ium@yahoo.com not found. ERROR CODE 401
 Request processed:localhost:8082. Open connections: 2. STATUS CODE 200
 Request processed:localhost:8082. Open connections: 1. STATUS CODE 200
-Request processed:localhost:8082. Open connections: 0. STATUS CODE 200
+Welcome adria. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8082. Open connections: 2. STATUS CODE 202
+ado97_madero@hotmail.com not found. ERROR CODE 401
+Welcome aditye55. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:8082. Open connections: 3. STATUS CODE 202
 Request processed:localhost:9081. Open connections: 1. STATUS CODE 200
-Request processed:localhost:9081. Open connections: 0. STATUS CODE 200
+adhie.impossible@gmail.com not found. ERROR CODE 401
+Welcome adeeldaftary. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9081. Open connections: 2. STATUS CODE 202
+Request processed:localhost:8082. Open connections: 2. STATUS CODE 200
+adam_petre@hotmail.com not found. ERROR CODE 401
+adam_khaldoon911@yahoo.com not found. ERROR CODE 401
+ium@yahoo.com not found. ERROR CODE 401
+Request processed:localhost:8081. Open connections: 2. STATUS CODE 200
 Request processed:localhost:8081. Open connections: 1. STATUS CODE 200
+Request processed:localhost:8082. Open connections: 1. STATUS CODE 200
+Request processed:localhost:9081. Open connections: 1. STATUS CODE 200
 Request processed:localhost:8081. Open connections: 0. STATUS CODE 200
+Request processed:localhost:9081. Open connections: 0. STATUS CODE 200
+Request processed:localhost:8082. Open connections: 0. STATUS CODE 200
 
 
 Bulk requests for www.apple.com
@@ -133,8 +127,8 @@ Delegated to: localhost:9082. Open connections: 6. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 7. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
 Request processed: localhost:9082. Open connections: 7. STATUS CODE 200
-Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
-Request processed: localhost:9082. Open connections: 7. STATUS CODE 200
+Request processed: localhost:9082. Open connections: 6. STATUS CODE 200
+Delegated to: localhost:9082. Open connections: 7. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
 Request processed: localhost:9082. Open connections: 7. STATUS CODE 200
 Request processed: localhost:9082. Open connections: 6. STATUS CODE 200
@@ -149,10 +143,10 @@ Request processed: localhost:9082. Open connections: 0. STATUS CODE 200
 Bulk firewall requests for www.apple.com
 
 Delegated to: localhost:9082. Open connections: 1. STATUS CODE 202
+Request blocked for ip: 157.25.45.15. STATUS CODE 403 
 Request blocked for ip: 192.168.29.142. STATUS CODE 403 
 Delegated to: localhost:9082. Open connections: 2. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 3. STATUS CODE 202
-Request blocked for ip: 157.25.45.15. STATUS CODE 403 
 Delegated to: localhost:9082. Open connections: 4. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 5. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 6. STATUS CODE 202
@@ -170,60 +164,70 @@ Request processed: localhost:9082. Open connections: 0. STATUS CODE 200
 
 Testing bloom filter with bulk requests for www.apple.com/login
 
+akbar.ca not found. ERROR CODE 401
+Welcome ajsparkchick. Your request is being processed. STATUS CODE 202
+Welcome akarui.kibuno. Your request is being processed. STATUS CODE 202
+Welcome ajmeia. Your request is being processed. STATUS CODE 202
 Welcome ajhnstn87. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 1. STATUS CODE 202
-akarui.kibuno@gmail.com not found. ERROR CODE 401
-akzelxw@hotmail.com not found. ERROR CODE 401
-akaterasu@gmail.com not found. ERROR CODE 401
-akbar.ca not found. ERROR CODE 401
-elum@gmail.com not found. ERROR CODE 401
-ajmeia@yahoo.com not found. ERROR CODE 401
-ajsparkchick@hotmail.com not found. ERROR CODE 401
-ailuvzhoko4@hotmail.com not found. ERROR CODE 401
-ailuvzhoko2@hotmail.com not found. ERROR CODE 401
-Welcome ailuvzhoko. Your request is being processed. STATUS CODE 202
-Welcome ailuvzhoko3. Your request is being processed. STATUS CODE 202
-aillensiquioco@aol.com not found. ERROR CODE 401
 Delegated to: localhost:9082. Open connections: 2. STATUS CODE 202
-ahmovic_ines@hotmail.com not found. ERROR CODE 401
+Welcome elum. Your request is being processed. STATUS CODE 202
+Welcome akaterasu. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 3. STATUS CODE 202
-Welcome ahmed_g300. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 4. STATUS CODE 202
-Welcome ahmadjazlan. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 5. STATUS CODE 202
-ahmad_ridho19@yahoo.com not found. ERROR CODE 401
-ahgou_9@hotmail.com not found. ERROR CODE 401
-Welcome ahan221. Your request is being processed. STATUS CODE 202
+Welcome akzelxw. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 6. STATUS CODE 202
-Welcome agnestenerife. Your request is being processed. STATUS CODE 202
-agungarifiyanto@yahoo.com not found. ERROR CODE 401
 Delegated to: localhost:9082. Open connections: 7. STATUS CODE 202
-agian_ee@yahoo.com not found. ERROR CODE 401
-afrodzac007@aol.com not found. ERROR CODE 401
-affinboy@hotmail.com not found. ERROR CODE 401
-afdal_hair1303@yahoo.com not found. ERROR CODE 401
-Welcome afd1944. Your request is being processed. STATUS CODE 202
+ailuvzhoko4@hotmail.com not found. ERROR CODE 401
+Welcome ailuvzhoko3. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
 Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
 Request processed:localhost:9082. Open connections: 6. STATUS CODE 200
-Welcome afandi.ilham. Your request is being processed. STATUS CODE 202
+Welcome ailuvzhoko. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 7. STATUS CODE 202
-aerongreg@yahoo.com not found. ERROR CODE 401
+ailuvzhoko2@hotmail.com not found. ERROR CODE 401
+aillensiquioco@aol.com not found. ERROR CODE 401
+ahmovic_ines@hotmail.com not found. ERROR CODE 401
+Welcome ahmed_g300. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+Request processed:localhost:9082. Open connections: 6. STATUS CODE 200
+ahmadjazlan@gmail.com not found. ERROR CODE 401
+ahmad_ridho19@yahoo.com not found. ERROR CODE 401
+Welcome ahgou_9. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 7. STATUS CODE 202
+Welcome ahan221. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+Welcome agungarifiyanto. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+agnestenerife@yahoo.com not found. ERROR CODE 401
+agian_ee@yahoo.com not found. ERROR CODE 401
+afrodzac007@aol.com not found. ERROR CODE 401
+affinboy@hotmail.com not found. ERROR CODE 401
+Welcome afdal_hair1303. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+afd1944@gmail.com not found. ERROR CODE 401
+Welcome afandi.ilham. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
+Welcome aerongreg. Your request is being processed. STATUS CODE 202
+Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
+Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
 adria@jbi.com not found. ERROR CODE 401
 ado97_madero@hotmail.com not found. ERROR CODE 401
+Request processed:localhost:9082. Open connections: 6. STATUS CODE 200
 Welcome aditye55. Your request is being processed. STATUS CODE 202
+adhie.impossible@gmail.com not found. ERROR CODE 401
+Delegated to: localhost:9082. Open connections: 7. STATUS CODE 202
+adeeldaftary@gmail.com not found. ERROR CODE 401
+adam_petre@hotmail.com not found. ERROR CODE 401
+Welcome adam_khaldoon911. Your request is being processed. STATUS CODE 202
 Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
 Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
-Welcome adhie.impossible. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
-Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
-Welcome adeeldaftary. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
-Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
-Welcome adam_petre. Your request is being processed. STATUS CODE 202
-Delegated to: localhost:9082. Open connections: 8. STATUS CODE 202
-Request processed:localhost:9082. Open connections: 7. STATUS CODE 200
-adam_khaldoon911@yahoo.com not found. ERROR CODE 401
 ium@yahoo.com not found. ERROR CODE 401
 Request processed:localhost:9082. Open connections: 6. STATUS CODE 200
 Request processed:localhost:9082. Open connections: 5. STATUS CODE 200
