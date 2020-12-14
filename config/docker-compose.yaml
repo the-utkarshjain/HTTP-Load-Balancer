@@ -1,26 +1,26 @@
 # docker-compose.yaml
 version: '3'
 services:
-  mango1:
+  amazon1:
     image: server
     environment:
-      - APP=mango
+      - APP=amazon
       - ENDPOINT=localhost:8081
     ports:
       - "8081:5000"
 
-  mango2:
+  amazon2:
     image: server
     environment:
-      - APP=mango
+      - APP=amazon
       - ENDPOINT=localhost:8082
     ports:
       - "8082:5000"
 
-  mango3:
+  amazon3:
     image: server
     environment:
-      - APP=mango
+      - APP=amazon
       - ENDPOINT=localhost:9081
     ports:
       - "9081:5000"
@@ -41,10 +41,10 @@ services:
   #   ports:
   #     - "9083:5000"
     
-  # flipkart1:
-  #   image: server
-  #   environment:
-  #     - APP=orange
-  #     - ENDPOINT=localhost:1111
-  #   ports:
-  #     - "1111:5000"
+  flipkart1:
+    image: server
+    environment:
+      - APP=flipkart
+      - ENDPOINT=localhost:1111
+    ports:
+      - "1111:5000"

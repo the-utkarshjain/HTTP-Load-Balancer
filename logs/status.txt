@@ -4,5 +4,5 @@ www.amazon.com localhost:9081 True 0
 www.apple.com localhost:9082 True 0
 www.apple.com localhost:9083 False 0
 www.apple.com localhost:8888 False 0
-www.flipkart.com localhost:1111 False 0
+www.flipkart.com localhost:1111 True 0
 www.flipkart.com localhost:1212 False 0

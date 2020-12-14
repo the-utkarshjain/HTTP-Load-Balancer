@@ -14,7 +14,7 @@ def client():
     with loadbalancer.test_client() as client:
         yield client
 
-def test_host_routing_mango(client):
+def test_host_routing_amazon(client):
     host = "www.amazon.com"
     print("\n\n\033[1mBulk requests for "+ host +" \033[0m")
     log_file("\n\nBulk requests for "+ host +"\n\n")
@@ -30,12 +30,12 @@ def test_firewall_amazon(client):
         result = client.get('/', headers={"Host":host}, environ_base={'REMOTE_ADDR': ip_list[i]})
     Parallel(n_jobs= multiprocessing.cpu_count(), backend = 'threading')(delayed(execute)(i) for i in range(len(ip_list)))
 
-def test_host_routing_mango_login(client):
+def test_host_routing_amazon_login(client):
     host = "www.amazon.com"
     print("\n\n\033[1mTesting bloom filter with bulk requests for "+ host +"/login \033[0m")
     log_file("\n\nTesting bloom filter with bulk requests for "+ host +"/login\n\n")
     def execute(i):
-        result = client.get('/login', headers={"Host":host, "email": emails[i], "password": emails[i + random.randint(-1,0)].split("@")[0]})
+        result = client.get('/login', headers={"Host":host, "email": emails[i], "password": emails[i + random.randint(-1,0)].split("@")[0]}, environ_base={'REMOTE_ADDR': ip_list[i%len(ip_list)]})
     Parallel(n_jobs= multiprocessing.cpu_count(), backend = 'threading')(delayed(execute)(i) for i in range(len(emails)))
 
 def test_host_routing_apple(client):
@@ -59,11 +59,11 @@ def test_host_routing_apple_login(client):
     print("\n\n\033[1mTesting bloom filter with bulk requests for "+ host +"/login \033[0m")
     log_file("\n\nTesting bloom filter with bulk requests for "+ host +"/login\n\n")
     def execute(i):
-        result = client.get('/login', headers={"Host":host, "email": emails[i], "password": emails[i + random.randint(-1,0)].split("@")[0]})
+        result = client.get('/login', headers={"Host":host, "email": emails[i], "password": emails[i + random.randint(-1,0)].split("@")[0]}, environ_base={'REMOTE_ADDR': ip_list[i%len(ip_list)]})
     Parallel(n_jobs= multiprocessing.cpu_count(), backend = 'threading')(delayed(execute)(i) for i in range(len(emails)))
 
 def test_host_notfound(client):
-    host = "www.notmango.com"
+    host = "www.notamazon.com"
     print("\n\n\033[1mBulk requests for "+ host +" \033[0m")
     log_file("\n\nBulk requests for "+ host +"\n\n")
     def execute(i):

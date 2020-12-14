@@ -4,6 +4,7 @@
 from flask import Flask
 import os, time
 from random import randint
+import requests
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ app = Flask(__name__)
 def sample():
     time.sleep(randint(3,10))
     return "This is the {} application. Serving on {}.".format(os.environ["APP"], os.environ["ENDPOINT"])
-
+    
 @app.route('/healthcheck')
 def healthcheck():
     return "OK"
